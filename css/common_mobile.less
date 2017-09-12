@@ -1,0 +1,198 @@
+@color:#60c158;
+
+//html { font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+
+body,input, textarea, select, button { font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+
+body {
+  min-width: 320px; 
+  margin: auto; 
+  //font-size: 1.3rem;
+}
+
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height:0;
+        clear:both;
+        visibility: hidden;
+    }
+}
+.nowrap(){
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.nowrap2(@line:2){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+}
+
+.nowrap-clear(){
+    overflow: visible;
+    white-space:normal;
+}
+
+
+.zoom-image{
+    width:100%;
+    height:0;
+    padding-bottom: 100%;
+    overflow:hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+}
+.zoom-image-fun(@width:100%,@height:100%){
+    width:@width;
+    height:0;
+    padding-bottom: @height;
+    overflow:hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+}
+
+
+
+.fix-width{
+    max-width: 640px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.fix-short-width{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+.fix-width-flex{
+    width: 94%;
+    margin: 0 auto; 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+.fix-width-fun(@width:94%){
+    position: relative;
+    width: @width;
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+
+
+.full-page{
+	height: 100%;
+}
+
+
+//栅格系统
+
+.row{
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    .clearfix();
+}
+
+.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+    // position: relative;
+    min-height: 1px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    .clearfix();
+}
+.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+    float: left;
+}
+
+.col-12 {width: 100%;}
+.col-11 {width: 91.66666667%;}
+.col-10 {width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
+
+
+
+//loading css3动画
+@-webkit-keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);  }
+  50% {
+    -webkit-transform: scaley(0.4);
+            transform: scaley(0.4);}
+  100% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);  } 
+}
+@keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1); }
+  50% {
+    -webkit-transform: scaley(0.4);
+            transform: scaley(0.4); }
+  100% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1); } 
+}
+
+.line-scale{
+    text-align: center;
+    >div{
+        background-color: @color;
+        width: 3px;
+        height: 30px;
+        border-radius: 2px;
+        margin: 2px;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+        display: inline-block;
+        &:nth-child(1){
+            -webkit-animation: line-scale 1s 0.1s infinite cubic-bezier(.2, .68, .18, 1.08);
+                    animation: line-scale 1s 0.1s infinite cubic-bezier(.2, .68, .18, 1.08); 
+        }
+        &:nth-child(2){
+            -webkit-animation: line-scale 1s 0.2s infinite cubic-bezier(.2, .68, .18, 1.08);
+                    animation: line-scale 1s 0.2s infinite cubic-bezier(.2, .68, .18, 1.08); 
+        }
+        &:nth-child(3){
+            -webkit-animation: line-scale 1s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08);
+                    animation: line-scale 1s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08); 
+        }
+        &:nth-child(4){
+            -webkit-animation: line-scale 1s 0.4s infinite cubic-bezier(.2, .68, .18, 1.08);
+                    animation: line-scale 1s 0.4s infinite cubic-bezier(.2, .68, .18, 1.08); 
+        }
+        &:nth-child(5){
+            -webkit-animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08);
+                    animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08); 
+        }
+    }
+}
+
+
+

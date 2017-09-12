@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mobileEditor.js</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=no">
+	<link href="css/piptel.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<div id="cont2">
+	<div class="fix-width">
+		<div class="add-form">
+			<div class="form-line article-edit">
+				<div class="line-title">正文</div>
+
+				<div class="article-container">
+					<input type="hidden" id="article_content" name="info.article_content">
+					<div class="article-editor" id="editor"></div>
+				</div>
+
+
+				<div class="tool-bar">
+					<div class="tool-btn">
+						<div class="btn-icon add-file" id="add-file"></div>
+						<input id="fileupload" type="file" name="file" >
+					</div>
+					<div class="tool-btn">
+							<div class="btn-icon add-link" id="add-link"></div>
+					</div>
+					<div class="tool-btn">
+						<div class="btn-icon add-img" id="add-img"></div>
+						<input id="imageUpload" type="file" name="file" accept="image/png,image/jpg,image/jpeg,image/gif">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-line article-edit">
+				<table class="file-list"></table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="pop pop-link">
+    <div class="pop-bg">
+        <div class="pop-up">
+			<div class="pop-header">
+				<div class="text">插入超链接</div>
+				<div class="close-btn"></div>
+			</div>
+
+			<div class="pop-body">
+				<div class="form-line">
+					<div class="sub-title">文本内容</div>
+					<input type="text" id="link-text" autocomplete="off" disableautocomplete/>
+				</div>
+				<div class="form-line">
+					<div class="sub-title">链接地址</div>
+					<input type="text" id="link-url" autocomplete="off" disableautocomplete/>
+				</div>
+				<div id="open-new-window" class="open-new-window on">是否在新窗口打开</div>
+			</div>
+			<div class="pop-footer">
+				<input type="button" value="确定" id="link-insert"/>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="loading">
+	<div class="load-content">
+	    <div class="loader-inner pacman">
+	      <div></div>
+	      <div></div>
+	      <div></div>
+	      <div></div>
+	      <div></div>
+	    </div>
+		<div class="text">上传中 请耐心等待</div>
+	</div>
+</div>
+
+
+<script src="js/vendor/exif.js"></script>
+<script src="js/jquery.art-editor.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script src="js/public_editor.js"></script>
+
+</body>
+</html>
